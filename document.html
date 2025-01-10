@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/mesImages/s3.png" type="">
+
+  <title> SimuAgent </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/boutton2.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <span>SimuAgent</span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Accueil<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="document.html"> Article universitaire </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/geoMJ/crime-prevention-simulation" > Depot Git </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> A propos</a>
+              </li>
+            </ul>
+            <form class="form-inline ml-3">
+              <button class="btn my-2 my-sm-0 nav_search-btn" type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="intro_section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-12">
+            <div class="detail-box text-center">
+              <h1 class="mb-4" style="font-weight: bold;">
+                <span style="color: #ff6347;">Faits de malveillance :</span>
+                <span style="color: #9de3ff; font-style: italic;">A la recherche de l’emplacement idéal des postes de
+                  police à Nantes</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!--end section -->
+
+  <!-- why section -->
+
+  <section class="why_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <br>
+        <p style="font-size: 16px; line-height: 1.8; color: #333; text-align: justify;">
+          Ce projet vise à déterminer les emplacements optimaux des postes de police à Nantes afin de réduire les temps
+          d’intervention des forces de l’ordre en cas d’incidents. Pour ce faire, une modélisation basée sur l’analyse
+          des zones sensibles (hotspots) de criminalité a été réalisée. Deux approches ont été explorées : le
+          <strong style="color: #003c8f;">problème
+            des p-centres</strong>, qui minimise la distance maximale entre les incidents et les postes, et le
+          <strong style="color: #003c8f;">Location Set
+            Covering Problem (LSCP)</strong>, qui optimise la couverture spatiale en garantissant un temps de réponse
+          acceptable.
+          Cette étude utilise des données géographiques issues d'OpenStreetMap et des statistiques locales de
+          criminalité pour créer des scénarios de simulation réalistes, et s’appuie sur des algorithmes de clustering
+          pour améliorer l’efficacité des calculs. Le projet propose ainsi une méthodologie innovante permettant aux
+          décideurs d’améliorer la sécurité publique de manière pragmatique et efficace.
+        </p>
+      </div>
+      <hr>
+      <hr>
+      <div class="why_container">
+        <div class="box">
+          <div class="detail-box">
+            <h2 class="section-title">
+              1. Introduction
+            </h2>
+            <br>
+            <div class="content-box">
+              <p>
+                Si la ville de Nantes était autrefois reconnue pour son cadre de vie agréable, son image s’est récemment
+                assombrie en raison d’événements violents survenus dans certains quartiers prioritaires (meurtres par
+                arme à feu) et d’agressions sexuelles en centre-ville.
+                Même si les statistiques confirment que la criminalité n’y est pas nécessairement plus élevée que dans
+                des agglomérations comparables, l’opinion publique demeure sensible à ces faits divers, et les
+                politiques de sécurité locales se sont durcies.
+              </p>
+              <p>
+                Cette perception contrastée — entre <strong style="color: #003c8f;">réalité statistique</strong> et <strong style="color: #003c8f;">sentiment
+                  d’insécurité</strong> — a conduit à la publication de nombreuses données sur les actes de délinquance,
+                offrant ainsi une base solide pour mener des analyses spatiales et des simulations.
+              </p>
+              <hr class="divider">
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="detail-box">
+            <h2 class="section-title">
+              2. Définition des termes et choix de modélisation
+            </h2>
+            <br>
+            <div class="content-box">
+              <p>
+                Pour notre étude, nous avons choisi de caractériser et de spatialiser les événements malveillants à
+                travers le concept de <strong style="color: #003c8f;">hotspot</strong>. En criminologie, un hotspot est généralement défini
+                comme une zone
+                géographique où la fréquence des délits est significativement plus élevée qu’ailleurs (Braga, 2005).
+                Cette notion repose sur la théorie selon laquelle un petit nombre de lieux concentre un grand volume
+                d’actes criminels (Sherman, Gartin & Buerger, 1989). Les travaux empiriques de Weisburd (2015) ont par
+                exemple montré qu’environ <strong style="color: #003c8f;">50 % des appels liés aux crimes violents</strong> peuvent se
+                concentrer sur moins de
+                <strong style="color: #003c8f;">5 % de l’espace urbain</strong>.
+              </p>
+
+              <p>
+                S’inscrivant dans cette logique, la <strong style="color: #003c8f;">police prédictive</strong> (Perry et al., 2013) repose
+                largement sur
+                l’identification de hotspots pour guider les patrouilles et intervenir de façon proactive. Plutôt que de
+                modéliser des agents « délinquants » et « victimes » interagissant dans l’espace, nous avons opté pour
+                une approche simplifiée :
+              </p>
+
+              <ul style="padding-left: 30px; line-height: 1.8;">
+                <li>Chaque hotspot est un nœud où se déclenchent des incidents selon une liste prédéfinie d’infractions.
+                </li>
+                <li>Les patrouilles reçoivent une alerte et se déplacent vers le hotspot pour intervenir.</li>
+              </ul>
+
+              <p>
+                Cette simplification présente plusieurs avantages pour notre étude, orientée sur <strong style="color: #003c8f;">l’optimisation
+                  de la
+                  couverture spatiale</strong> :
+              </p>
+
+              <ul style="padding-left: 30px; line-height: 1.8;">
+                <li>D’une part, cela est plus simple à mise en œuvre : Cette approche évite d’introduire des règles
+                  complexes concernant les déplacements ou interactions des acteurs criminels. La charge criminelle est
+                  directement localisée sur des points fixes, les hotspots.</li>
+                <li>D’autre part, cela permet de prendre en compte la concentration spatiale : Inspirée par la
+                  <strong style="color: #003c8f;">Routine
+                    Activity Theory</strong> (Cohen & Felson, 1979), selon laquelle les crimes surviennent lorsque trois
+                  conditions
+                  sont réunies — un délinquant motivé, une cible accessible et l’absence de surveillance —, et par les
+                  travaux sur les hotspots (Sherman et al., 1989 ; Weisburd, 2015), elle met l’accent sur le fait que la
+                  majorité des délits se concentrent dans un ensemble limité de lieux.</li>
+              </ul>
+
+              <p>
+                Enfin, elle permet une focalisation sur le <strong style="color: #003c8f;">temps de réponse</strong> : L’approche permet de
+                mesurer directement
+                le délai nécessaire à une patrouille pour rejoindre un hotspot, sans se disperser sur l’étude des
+                processus comportementaux ou des motivations à l’origine des incidents.
+              </p>
+
+              <p>
+                Ainsi, les hotspots sont considérés comme des sources directes d’infractions, permettant de se
+                concentrer sur la logique territoriale du phénomène moins essentialiste :
+              </p>
+
+              <ol style="padding-left: 30px; line-height: 1.8;">
+                <li>Le temps d’intervention varie-t-il en fonction de la configuration spatiale des postes ?</li>
+                <li>La résolution des incidents diffère-t-elle selon la distribution spatiale des postes ?</li>
+              </ol>
+
+              <p>
+                Ce choix de modélisation, qui privilégie <strong style="color: #003c8f;">l’identification des hotspots</strong> à la simulation
+                des comportements
+                criminels individuels, permet de maintenir un modèle plus épuré, centré sur <strong style="color: #003c8f;">l’efficacité du
+                  dispositif
+                  policier</strong> et sur l’analyse de la distribution spatiale des incidents dans la ville.
+              </p>
+
+              <div class="image-box">
+                <img id="highlighted-image" src="images/mesImages/nantes_pqv2.png"
+                  alt="Quartiers sensibles et prioritaires à Nantes" class="img-fluid">
+                <p class="image-caption">
+                  Quartiers sensibles et prioritaires à Nantes : Une forte probabilité d’émergence de hotspots
+                  d’infraction.
+                </p>
+              </div>
+
+
+              <p>
+                Cette carte a pour objectif d’expliquer nos choix dans l’identification des emplacements où les hotspots
+                d’infractions ont le plus de chances d’émerger dans la ville de Nantes. En croisant les données des
+                Zones de Sécurité Prioritaires (ZSP) et des Quartiers Prioritaires de la Politique de la Ville (QPV),
+                nous avons supposé que les faits de délinquance étaient plus susceptibles de se concentrer dans ces
+                zones sensibles.
+              </p>
+              <p>
+                Bien que cette approche soit relativement déterministe et ne reflète pas pleinement la complexité de la
+                réalité, elle offre un point de départ cohérent pour la création des <em style="font-style: italic; color: #0056b3;">hotspots</em>. Ces zones,
+                toutes connectées au réseau routier principal, permettent d’orienter notre modélisation vers des
+                scénarios plus réalistes et opérationnels.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="box">
+          <div class="detail-box">
+            <h2 class="section-title">
+              3. Problématisation
+            </h2>
+            <br>
+            <div class="content-box">
+              <p>
+                Dans ce contexte, la question centrale de notre sujet est la suivante : <strong style="color: #003c8f;">Quels sont les
+                  emplacements optimaux de n postes de police, qui permettent de réduire les temps d’intervention des
+                  forces de l’ordre face aux incidents ?</strong>
+              </p>
+
+              <p>
+                Deux grandes approches de la recherche opérationnelle peuvent être mobilisées :
+              </p>
+              <ol class="custom-list">
+                <li>
+                  <strong style="color: #003c8f;">Le problème des p-centres</strong>, qui consiste à localiser <em style="font-style: italic; color: #0056b3;">p installations</em> (ici,
+                  des postes de police) de manière à <strong style="color: #003c8f;">minimiser la distance maximale</strong> séparant un hotspot
+                  criminel d’un poste.
+                </li>
+                <li>
+                  <strong style="color: #003c8f;">Le LSCP (Location Set Covering Problem)</strong>, qui fixe un <strong style="color: #003c8f;">rayon de couverture
+                    acceptable</strong> (distance maximale à ne pas dépasser) et cherche le <strong style="color: #003c8f;">nombre
+                    minimal</strong> de postes nécessaires pour couvrir chaque zone sensible.
+                </li>
+              </ol>
+
+              <p>
+                Nous avons choisi de privilégier le <strong style="color: #003c8f;">LSCP (Location Set Covering Problem)</strong>, car il donne
+                une vision claire de la manière de garantir une intervention rapide partout (chaque point restant à une
+                distance raisonnable). Toutefois, nous avons également exploré le problème des
+                <strong style="color: #003c8f;">p-centres</strong>, qui est le plus pertinent dans un cadre réaliste où les contraintes
+                économiques peuvent imposer un nombre donné d’infrastructures.
+              </p>
+
+              <p>
+                Cependant, en raison de la <strong style="color: #003c8f;">complexité algorithmique</strong> et du <strong style="color: #003c8f;">temps de calcul très
+                  long</strong> des p-centres — chaque point client nécessitant un calcul exhaustif — nous avons opté
+                pour une approche de <strong style="color: #003c8f;">clustering</strong> (<em style="font-style: italic; color: #0056b3;">Clustering Algorithms: K-means</em>) afin de
+                réduire les temps de calcul.
+              </p>
+
+              <p>
+                Pour cela, l’espace de Nantes a été divisé en <strong style="color: #003c8f;">100 clusters</strong>, ce qui a permis de
+                restreindre les calculs à des sous-ensembles plus petits et ainsi, améliorer la vitesse d’exécution.
+              </p>
+
+              <p>
+                Néanmoins, cette approche introduit une <strong style="color: #003c8f;">perte de précision</strong>, car les clusters limitent
+                la possibilité d’optimiser la localisation globale des infrastructures en considérant simultanément
+                l’ensemble des points clients.
+              </p>
+
+              <hr class="divider">
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="detail-box">
+            <h2 class="section-title">
+              4. Hypothèse et méthodologie
+            </h2>
+            <br>
+            <div class="content-box">
+              <p>
+                <strong style="color: #003c8f;">Notre hypothèse de recherche</strong> postule que : <em style="font-style: italic; color: #0056b3;">Réduire le rayon de couverture d au sein
+                  du modèle LSCP (Location Set Covering Problem) améliore significativement la réactivité des forces de
+                  l’ordre, en garantissant un temps de réponse plus court pour la majorité des incidents.</em>
+              </p>
+
+              <p>
+                Autrement dit, imposer une distance maximale plus restrictive – et donc potentiellement installer
+                davantage de postes – devrait se traduire par un pourcentage plus élevé d’interventions réalisées dans
+                le délai ciblé.
+              </p>
+
+              <p>
+                <strong style="color: #003c8f;">Pour valider ou infirmer cette hypothèse</strong>, notre méthode consiste à faire varier le
+                paramètre <strong style="color: #003c8f;">d</strong> sur plusieurs scénarios de simulation, comme par exemple :
+              </p>
+
+              <ul class="custom-list">
+                <li><strong style="color: #003c8f;">Scénario A</strong> : <strong style="color: #003c8f;">d = 30 minutes</strong>, conduisant à un certain nombre de
+                  postes calculé via LSCP.</li>
+                <li><strong style="color: #003c8f;">Scénario B</strong> : <strong style="color: #003c8f;">d = 15 minutes</strong>, avec un nombre de postes sans doute
+                  plus important, mais une distance maximale autorisée plus faible.</li>
+                <li><strong style="color: #003c8f;">Scénario C</strong> : <strong style="color: #003c8f;">d = 5 minutes</strong>, renforçant encore la contrainte de
+                  couverture et augmentant possiblement le nombre de postes requis.</li>
+              </ul>
+
+              <p>
+                Dans chaque scénario, la configuration spatiale des postes obtenue par LSCP est intégrée à la
+                <strong style="color: #003c8f;">modélisation multi-agents</strong> qui apporte une considération dynamique : Des incidents sont
+                générés de manière aléatoire (les actes violents ont plus de chance de se produire dans les zones
+                sensibles <strong style="color: #003c8f;">(40%)</strong>), et des patrouilles se déplacent depuis les postes les plus proches
+                pour y intervenir. Les indicateurs clés (<strong style="color: #003c8f;">temps moyen d’intervention</strong>,
+                <strong style="color: #003c8f;">pourcentage d’incidents traités sous un seuil temporel</strong>, etc.) seront ensuite comparés
+                entre les trois scénarios.
+              </p>
+
+              <p>
+                Ainsi, si un scénario avec un rayon <strong style="color: #003c8f;">d</strong> plus réduit aboutit effectivement à un
+                <strong style="color: #003c8f;">temps de réponse plus court</strong> et une couverture plus efficace (nombre d’incidents résolus
+                dans le délai ciblé plus élevé), notre hypothèse sera confirmée. Dans le cas contraire, ou si l’apport
+                de scénarios très contraints (faible <strong style="color: #003c8f;">d</strong>) reste marginal, l’hypothèse devra être nuancée
+                ou révisée.
+              </p>
+
+              <div class="image-box">
+                <img src="images/mesImages/lscp2.png" alt="Illustration des scénarios de simulation LSCP"
+                  class="img-fluid">
+                <p class="image-caption">
+                  Illustration des scénarios de simulation LSCP selon différents rayons de couverture.
+                </p>
+              </div>
+
+              <hr class="divider">
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="detail-box">
+            <h2 class="section-title">
+              5. Techniques et outils
+            </h2>
+            <br>
+            <div class="content-box">
+
+              <!-- Sous-section : Choix du langage -->
+              <h3>Choix du langage</h3>
+              <br>
+              <p>
+                Nous avons décidé de développer entièrement le projet en <strong style="color: #003c8f;">Julia</strong>, qui se distingue des
+                autres langages (comme Python) par son <strong style="color: #003c8f;">haut niveau de performance</strong> et sa
+                <strong style="color: #003c8f;">facilité d’écriture</strong>. Elle permet d’écrire du code concis, lisible, tout en bénéficiant
+                d’exécutions rapides presque au niveau du C/C++. Dans un projet mêlant optimisation
+                (<strong style="color: #003c8f;">LSCP</strong>) et simulation multi-agents (<strong style="color: #003c8f;">ABM</strong>), la vitesse de calcul est
+                indispensable pour traiter de grandes quantités de données.
+              </p>
+
+              <p>
+                De plus, Julia dispose de bibliothèques spécialisées (<strong style="color: #003c8f;">JuMP</strong> pour l’optimisation,
+                <strong style="color: #003c8f;">Agents.jl</strong> pour l’ABM) qui offrent un écosystème cohérent et performant, simplifiant la
+                mise en place de scénarios complexes.
+              </p>
+              <br>
+
+              <!-- Sous-section : Création du graphe -->
+              <h3>Création du graphe à partir du réseau routier d’OpenStreetMap</h3>
+              <br>
+              <p>
+                Pour construire la représentation spatiale du réseau urbain, notre choix s’est porté sur
+                <strong style="color: #003c8f;">OpenStreetMap (OSM)</strong>. En effet, OSM fournit un réseau routier <strong style="color: #003c8f;">orienté</strong>,
+                c’est-à-dire que les routes ne sont pas toujours bidirectionnelles (sens unique, par exemple, où <em style="font-style: italic; color: #0056b3;">A →
+                  B ≠ B → A</em>).
+              </p>
+
+              <p>
+                De plus, les <strong style="color: #003c8f;">tags de vitesse</strong> (<em style="font-style: italic; color: #0056b3;">maxspeed</em>) associés aux tronçons de route
+                permettent de pondérer chaque arête du graphe en fonction du <strong style="color: #003c8f;">temps de trajet</strong> plutôt que
+                de la seule distance kilométrique linéaire. Cet aspect nous a paru indispensable pour modéliser le temps
+                de réponse des patrouilles de police.
+              </p>
+
+              <p>
+                Aussi, cela permet de générer un <strong style="color: #003c8f;">graphe routier</strong> qui correspond davantage à la réalité
+                quotidienne des déplacements : il ne s’agit pas simplement d’un réseau « idéal » où tous les arcs
+                seraient bidirectionnels et de vitesse uniforme, mais d’un modèle un peu plus complexe qui intègre des
+                <strong style="color: #003c8f;">restrictions directionnelles</strong> et des <strong style="color: #003c8f;">limites de vitesse</strong>. Cela donne une
+                meilleure estimation du temps nécessaire pour qu’une patrouille rejoigne un hotspot criminel, et donc
+                une analyse plus réaliste de la couverture spatiale assurée par les postes de police.
+              </p>
+
+              <div class="image-box">
+                <img id="highlighted-image" src="images/mesImages/graphe_titre.png"
+                  alt="Graphe du réseau routier simplifié de la ville de Nantes (44)" class="img-fluid my-4">
+                <p class="image-caption">Graphe du réseau routier simplifié de la ville de Nantes (44).</p>
+              </div>
+
+              <p>
+                Afin d’éviter des temps de calcul interminables, nous avons simplifié le réseau routier aux trois
+                grandes types de routes : <strong style="color: #003c8f;">Primary</strong>, <strong style="color: #003c8f;">Secondary</strong> et
+                <strong style="color: #003c8f;">Tertiary</strong> (voir la figure ci-dessus).
+              </p>
+              <br>
+              <!-- Sous-section : Création de la population virtuelle -->
+              <h3>Création de la population virtuelle</h3>
+              <br>
+
+              <h4>Répartition des incidents</h4>
+              <br>
+              <p>
+                La population virtuelle repose sur les données statistiques locales, notamment la répartition des
+                infractions observées à Nantes. Avec <strong style="color: #003c8f;">65 % des incidents</strong> que nous considérons comme
+                <strong style="color: #003c8f;">non violents</strong> et <strong style="color: #003c8f;">35 % comme violents</strong>, nous avons généré une liste
+                d’infractions correspondant à ces proportions. Ces données incluent des types spécifiques de crimes
+                (vols, violences sexuelles, dégradations, etc.).
+              </p>
+
+              <div class="image-box">
+                <img src="images/mesImages/typeCrime.png" alt="Pourcentage des types de crime dans la ville de Nantes"
+                  class="img-fluid my-4">
+                <br>
+                <p class="image-caption">Pourcentage des types de crime dans la ville de Nantes. Source : Ministère de
+                  l’Intérieur.</p>
+              </div>
+              <br>
+              <!-- Sous-section : Points clients et hotspots -->
+              <h4>Points clients et hotspots</h4>
+              <p>
+                Dans le cadre du modèle <strong style="color: #003c8f;">p-centre</strong>, les points clients, qui représentent des lieux où des
+                incidents pourraient survenir, sont répartis initialement de manière équilibrée sur tout le territoire.
+                Cette approche garantit une couverture spatiale homogène pour les premières simulations. Une fois que
+                les incidents commencent à émerger, ils forment des <strong style="color: #003c8f;">hotspots</strong>. Ces derniers deviennent
+                alors eux-mêmes des points clients pour les simulations suivantes. Cela permet une adaptation
+                progressive des infrastructures policières à la dynamique spatiale des incidents.
+              </p>
+
+              <p>
+                En revanche, pour le modèle <strong style="color: #003c8f;">LSCP</strong>, il n’y a pas de notion de point client à proprement
+                parler mais un calcul de matrice de distance-temps, calculée à partir du réseau routier. Ici, les
+                hotspots n’interviennent pas directement, car l’objectif est de <strong style="color: #003c8f;">minimiser le temps maximal
+                  d’intervention</strong> à tout point du graphe en optimisant la répartition des infrastructures.
+              </p>
+              <br>
+              <!-- Sous-section : Modélisation des patrouilles de police -->
+              <h4>Modélisation des patrouilles de police</h4>
+              <br>
+              <p>
+                Les patrouilles de police, quant à elles, permettent d’évaluer la capacité opérationnelle du dispositif.
+                Chaque patrouille est initialement assignée à un poste de police et se déplace en fonction des incidents
+                signalés dans les hotspots. Ces déplacements sont simulés à l’aide des données du réseau routier,
+                pondérées par les limitations de vitesse et les contraintes du réseau (graphe orienté).
+              </p>
+
+              <p>
+                Dans le modèle <strong style="color: #003c8f;">p-centre</strong>, les patrouilles sont déployées pour <strong style="color: #003c8f;">minimiser la
+                  distance maximale</strong> entre les postes et les points clients. Concernant le
+                <strong style="color: #003c8f;">LSCP</strong>, elles sont utilisées pour tester la capacité des postes à garantir une
+                intervention dans une durée prédéterminée, souvent mesurée en minutes.
+              </p>
+              <br>
+              <h4>Tableau des méthodes et fonctions utilisées</h4>
+
+              <div class="image-box">
+                <img src="images/mesImages/tableMethodes.png" alt="Tableau des méthodes et fonctions utilisées"
+                  class="img-fluid my-4">
+                <p class="image-caption">Tableau des méthodes et fonctions utilisées dans notre étude.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="detail-box">
+            <h2 class="section-title">
+              6. Résultats
+            </h2>
+            <br>
+            <div class="content-box">
+              <p>
+                [Insérez ici les résultats obtenus lors des différentes simulations. Ces résultats peuvent inclure des
+                graphiques, des comparaisons de temps d’intervention, et des tableaux de performance selon les
+                différents scénarios.]
+              </p>
+
+              <div class="image-box">
+                <img id="highlighted-image" src="images/mesImages/resultats.png" alt="Résultats des simulations"
+                  class="img-fluid my-4">
+                <p class="image-caption">Illustration des résultats obtenus lors des simulations.</p>
+              </div>
+            </div>
+
+            <h2 class="section-title">
+              7. Conclusion et discussion
+            </h2>
+            <br>
+            <br>
+            <div class="content-box">
+              <p>
+                <strong style="color: #003c8f;">Pour rappel, notre problématique était la suivante :</strong>
+              </p>
+              <blockquote class="blockquote">
+                Quels sont les emplacements optimaux de <em style="font-style: italic; color: #0056b3;">n</em> postes de police, qui permettent de réduire les temps
+                d’intervention des forces de l’ordre face aux incidents ?
+              </blockquote>
+
+              <p>
+                Pour y répondre, nous avons utilisé <strong style="color: #003c8f;">deux approches opérationnelles</strong> :
+              </p>
+              <ul class="custom-list">
+                <li><strong style="color: #003c8f;">Le problème des P-Centres</strong> : Cette approche permet, à partir d’une contrainte de
+                  <em style="font-style: italic; color: #0056b3;">n</em> postes de police, de trouver leur emplacement idéal pour <strong style="color: #003c8f;">minimiser le temps de
+                    réponse</strong>.
+                </li>
+                <li><strong style="color: #003c8f;">Le LSCP (Location Set Covering Problem)</strong> : Cette méthode permet de trouver le
+                  <strong style="color: #003c8f;">nombre idéal de postes de police</strong> et leur position pour <strong style="color: #003c8f;">couvrir l’espace en un
+                    seuil d de distance-temps</strong>.
+                </li>
+              </ul>
+
+              <p>
+                Ces deux axes permettent d’aborder la question sous deux angles différents :
+              </p>
+              <ol class="nested-list">
+                <li><strong style="color: #003c8f;">La contrainte économique</strong> : Construire un poste coûte cher, donc l’objectif est de
+                  <strong style="color: #003c8f;">minimiser les coûts</strong> tout en assurant un service optimal.
+                </li>
+                <li><strong style="color: #003c8f;">La contrainte temporelle</strong> : Plus la contrainte temporelle est forte (réduire le
+                  temps d’intervention), plus le <em style="font-style: italic; color: #0056b3;">nombre de postes</em> nécessaires sera élevé.</li>
+              </ol>
+            </div>
+
+            <h2 class="section-title">
+              8. Bibliographie
+            </h2>
+            <br>
+            <div class="content-box">
+              <ul class="custom-list">
+                <li><strong style="color: #003c8f;">Braga, A.</strong> (2005). <em style="font-style: italic; color: #0056b3;">Hot spots policing and crime prevention: A systematic review
+                    of randomized controlled trials</em>. Journal of Experimental Criminology, 1(3), 317–342.</li>
+                <li><strong style="color: #003c8f;">Cohen, L. E., & Felson, M.</strong> (1979). <em style="font-style: italic; color: #0056b3;">Social change and crime rate trends: A
+                    routine activity approach</em>. American Sociological Review, 44(4), 588–608.</li>
+                <li><strong style="color: #003c8f;">Perry, W. L., McInis, B., Price, C. C., Smith, S. C., & Hollywood, J. S.</strong> (2013).
+                  <em style="font-style: italic; color: #0056b3;">Predictive Policing: The Role of Crime Forecasting in Law Enforcement Operations</em>. RAND
+                  Corporation.
+                </li>
+                <li><strong style="color: #003c8f;">Sherman, L. W., Gartin, P. R., & Buerger, M. E.</strong> (1989). <em style="font-style: italic; color: #0056b3;">Hot spots of predatory
+                    crime: Routine activities and the criminology of place</em>. Criminology, 27(1), 27–55.</li>
+                <li><strong style="color: #003c8f;">Weisburd, D.</strong> (2015). <em style="font-style: italic; color: #0056b3;">The law of crime concentration and the criminology of
+                    place</em>. Criminology, 53(2), 133–157.</li>
+                <li><strong style="color: #003c8f;">Weisburd, D., & Eck, J. E.</strong> (2004). <em style="font-style: italic; color: #0056b3;">What Can Police Do to Reduce Crime,
+                    Disorder, and Fear?</em> The Annals of the American Academy of Political and Social Science, 593(1),
+                  42–65.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="docs/rapport.pdf" class="btn-download">
+          Télécharger un PDF
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end why section -->
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <!-- Section : Auteurs -->
+        <div class="col-md-6 col-lg-4 info_col">
+          <div class="info_contact">
+            <h4>
+              Auteurs
+            </h4>
+            <div class="author_list">
+              <p><strong style="color: #003c8f;">Violette Desbordes</strong></p>
+              <p><strong style="color: #003c8f;">Marianne J</strong></p>
+              <p><strong style="color: #003c8f;">Sydol ADOMADE</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section : Université et Projet -->
+        <div class="col-md-6 col-lg-4 info_col">
+          <div class="info_detail">
+            <h4>
+              Université
+            </h4>
+            <p>
+              <strong style="color: #003c8f;">Université Paris 8</strong><br>
+              <strong style="color: #003c8f;">Master G2M</strong><br>
+              Année académique : <strong style="color: #003c8f;">2024-2025</strong><br>
+              Niveau : <strong style="color: #003c8f;">Master 2</strong><br>
+              Projet de recherche avancée
+            </p>
+          </div>
+        </div>
+
+        <!-- Section : Supervision -->
+        <div class="col-md-6 col-lg-4 info_col">
+          <div class="info_contact">
+            <h4>
+              Supervision
+            </h4>
+            <p>
+              Sous la supervision de : <br>
+              <strong style="color: #003c8f;">Marc Bui</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> Tous droits réservés par
+        <a href="https://html.design/">Simulation Police Nantes</a>
+      </p>
+      <div class="footer_logos">
+        <img src="images/mesImages/p8.png" alt="Logo 1" class="footer_logo">
+        <img src="images/mesImages/fr.png"alt="Logo 2" class="footer_logo">
+      </div>
+    </div>
+  </section>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+  <script type="text/javascript" src="js/boutton.js"></script>
+</body>
+
+</html>
