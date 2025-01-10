@@ -101,7 +101,7 @@
 }
 
 .img-box:hover img {
-    transform: scale(1.4);
+    transform: scale(1.3);
 }
 
 /* Bouton centré */
